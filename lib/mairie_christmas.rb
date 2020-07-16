@@ -3,8 +3,6 @@ require 'nokogiri'
 require "httparty"
 require 'open-uri'
 
-url = "https://coinmarketcap.com/all/views/all/"
-page = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/")) 
 
 def get_townhall_email(townhallurl)
     page = Nokogiri::HTML(open(townhallurl))
@@ -62,4 +60,4 @@ def perform
 
 end 
 
-puts perform
+perform
